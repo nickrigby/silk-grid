@@ -1,0 +1,48 @@
+.silk-grid {
+    margin-right: $grid_gutter * -1;
+    margin-left: $grid_gutter * -1;
+
+    [class^='col'] {
+        float: left;
+        margin: 0 $grid_gutter ($grid_gutter * 2);
+        width: 100 - ($grid_gutter * 2);
+    }
+    
+    @for $i from 1 to length($breakpoints) + 1 {
+        
+        @include media(nth(nth($breakpoints, $i), 1)) {
+            
+            // Columns
+            @for $x from 1 to $grid_columns {
+                .col-#{nth(nth($breakpoints, $i), 1)}-#{$x}
+                {
+                    width: 100% / $grid_columns * $x - $grid_gutter * 2;
+                }
+            }
+            
+            @for $x from 1 to $grid_columns {
+                .col-#{nth(nth($breakpoints, $i), 1)}-flush-#{$x} {
+                    width: 100% / $grid_columns * $x;
+                }
+            }
+            
+            // Push
+            @if $grid_config_push_classes {
+                @for $x from 1 to $grid_columns {
+                    .col-#{nth(nth($breakpoints, $i), 1)}-push-#{$x} {
+                        margin-left: 100% / $grid_columns * $x + $grid_gutter;
+                    }
+                }
+            }
+            
+            // Pull
+            @if $grid_config_pull_classes {
+                @for $x from 1 to $grid_columns {
+                    .col-#{nth(nth($breakpoints, $i), 1)}-pull-#{$x} {
+                        margin-left: 100% / $grid_columns * $x * -1 + $grid_gutter;
+                    }
+                }
+            }
+        }
+    }
+}
