@@ -3,6 +3,12 @@
 .silk-grid {
     margin-right: $silk-grid--gutter * -1;
     margin-left: $silk-grid--gutter * -1;
+
+    &:after {
+        clear: both;
+        content: "";
+        display: block;
+    }
 }
 
 .silk-grid__col {
