@@ -13,7 +13,7 @@
 
 .silk-grid__col {
     float: left;
-    margin: 0 $silk-grid--gutter ($silk-grid--gutter * 2);
+    margin: 0 $silk-grid--gutter $silk-grid--gutter;
     width: 100 - ($silk-grid--gutter * 2);
 }
     

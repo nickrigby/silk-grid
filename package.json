@@ -1,6 +1,6 @@
 {
   "name": "silk-grid",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Grid system for the silk framework",
   "main": "src/scss/index.scss",
   "scripts": {
