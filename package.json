@@ -1,12 +1,16 @@
 {
   "name": "silk-grid",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Grid system for the silk framework",
-  "main": "index.js",
+  "main": "src/scss/index.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "idfive.com",
+  "author": {
+    "name": "Nick Rigby",
+    "email": "nick.rigby@gmail.com",
+    "url": "https://nickrigby.uk"
+  },
   "license": "ISC",
   "devDependencies": {
     "silk-core": "nickrigby/silk-core"
