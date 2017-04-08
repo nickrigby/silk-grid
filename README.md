@@ -1,5 +1,5 @@
 # Grid component for silk framework
-The grid component is a lightweight grid system for the [silk framework](https://github.com/silk). The grid uses responsive classes, that can be generated from any number of specified breakpoints.
+The grid component is a lightweight grid system for the [silk framework](https://github.com/nickrigby/silk). The grid uses responsive classes, that can be generated from any number of specified breakpoints.
 
 ## HTML
 ```html
