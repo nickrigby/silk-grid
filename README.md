@@ -63,7 +63,6 @@ Justify the alignment of grid columns using the `silk-grid--justify-{alignment}`
 <div class="silk-grid silk-grid--justify-left">
 ...
 </div>
-```html
 <div class="silk-grid silk-grid--justify-left-large">
 ...
 </div>
@@ -74,7 +73,6 @@ Justify the alignment of grid columns using the `silk-grid--justify-{alignment}`
 <div class="silk-grid silk-grid--justify-right">
 ...
 </div>
-```html
 <div class="silk-grid silk-grid--justify-right-medium">
 ...
 </div>
@@ -85,7 +83,6 @@ Justify the alignment of grid columns using the `silk-grid--justify-{alignment}`
 <div class="silk-grid silk-grid--justify-center">
 ...
 </div>
-```html
 <div class="silk-grid silk-grid--justify-center-small">
 ...
 </div>
@@ -99,7 +96,6 @@ Vertically align columns in the grid using the `silk-grid--align-{alignment}` mo
 <div class="silk-grid silk-grid--align-top">
 ...
 </div>
-```html
 <div class="silk-grid silk-grid--align-top-large">
 ...
 </div>
@@ -110,7 +106,6 @@ Vertically align columns in the grid using the `silk-grid--align-{alignment}` mo
 <div class="silk-grid silk-grid--align-bottom">
 ...
 </div>
-```html
 <div class="silk-grid silk-grid--align-bottom-medium">
 ...
 </div>
@@ -121,7 +116,6 @@ Vertically align columns in the grid using the `silk-grid--align-{alignment}` mo
 <div class="silk-grid silk-grid--align-center">
 ...
 </div>
-```html
 <div class="silk-grid silk-grid--align-center-small">
 ...
 </div>
@@ -134,7 +128,6 @@ Reverse the order of columns using the `silk-grid--reverse` modifier class. This
 <div class="silk-grid silk-grid--reverse">
 ...
 </div>
-```html
 <div class="silk-grid silk-grid--reverse-small">
 ...
 </div>
