@@ -1,4 +1,4 @@
 $silk-grid--columns: 12 !default;
-$silk-grid--gutter: 1% !default;
-$silk-grid--push-classes: true !default;
-$silk-grid--pull-classes: true !default;
+$silk-grid--gutter: 20px !default;
+$silk-grid--margin-top: 0 !default;
+$silk-grid--margin-bottom: $silk-grid--gutter !default;

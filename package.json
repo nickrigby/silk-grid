@@ -1,10 +1,10 @@
 {
   "name": "silk-grid",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Grid system for the silk framework",
   "main": "src/scss/index.scss",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile-sass": "sass --update src/scss:dist"
   },
   "author": {
     "name": "Nick Rigby",
@@ -13,6 +13,7 @@
   },
   "license": "ISC",
   "devDependencies": {
+    "sass": "^0.5.0",
     "silk-core": "nickrigby/silk-core"
   }
 }
