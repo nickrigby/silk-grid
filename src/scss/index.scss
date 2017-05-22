@@ -1,80 +1,80 @@
-@import "../../node_modules/silk-core/src/scss/index";
+@import "../../node_modules/silc-core/src/scss/index";
 @import "variables";
 
 /* ==========================================================================
    Grid container
    ========================================================================== */
 
-.silk-grid {
+.silc-grid {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -#{$silk-grid--gutter};
+    margin-left: -#{$silc-grid--gutter};
 }
 
 /* Grid container modifiers
    ========================================================================== */
 
-.silk-grid--no-gutters {
+.silc-grid--no-gutters {
     margin-left: 0;
 }
 
-.silk-grid--justify-center {
+.silc-grid--justify-center {
     justify-content: center;
 }
 
-.silk-grid--justify-right {
+.silc-grid--justify-right {
     justify-content: flex-end;
 }
 
-.silk-grid--justify-left {
+.silc-grid--justify-left {
     justify-content: flex-start;
 }
 
-.silk-grid--align-top {
+.silc-grid--align-top {
     align-items: flex-start;
 }
 
-.silk-grid--align-bottom {
+.silc-grid--align-bottom {
     align-items: flex-end;
 }
 
-.silk-grid--align-center {
+.silc-grid--align-center {
     align-items: center;
 }
 
-.silk-grid--reverse {
+.silc-grid--reverse {
     flex-direction: row-reverse;
 }
 
-@for $i from 1 to length($silk-core--breakpoints) + 1 {
+@for $i from 1 to length($silc-core--breakpoints) + 1 {
 
-    @include media(nth(nth($silk-core--breakpoints, $i), 1)) {
+    @include media(nth(nth($silc-core--breakpoints, $i), 1)) {
 
-        .silk-grid--justify-left-#{nth(nth($silk-core--breakpoints, $i), 1)} {
+        .silc-grid--justify-left-#{nth(nth($silc-core--breakpoints, $i), 1)} {
             justify-content: flex-start;
         }
 
-        .silk-grid--justify-right-#{nth(nth($silk-core--breakpoints, $i), 1)} {
+        .silc-grid--justify-right-#{nth(nth($silc-core--breakpoints, $i), 1)} {
             justify-content: flex-end;
         }
 
-        .silk-grid--justify-center-#{nth(nth($silk-core--breakpoints, $i), 1)} {
+        .silc-grid--justify-center-#{nth(nth($silc-core--breakpoints, $i), 1)} {
             justify-content: center;
         }
 
-        .silk-grid--align-top-#{nth(nth($silk-core--breakpoints, $i), 1)} {
+        .silc-grid--align-top-#{nth(nth($silc-core--breakpoints, $i), 1)} {
             align-items: flex-start;
         }
 
-        .silk-grid--align-bottom-#{nth(nth($silk-core--breakpoints, $i), 1)} {
+        .silc-grid--align-bottom-#{nth(nth($silc-core--breakpoints, $i), 1)} {
             align-items: flex-end;
         }
 
-        .silk-grid--align-center-#{nth(nth($silk-core--breakpoints, $i), 1)} {
+        .silc-grid--align-center-#{nth(nth($silc-core--breakpoints, $i), 1)} {
             align-items: center;
         }
 
-        .silk-grid--reverse-#{nth(nth($silk-core--breakpoints, $i), 1)} {
+        .silc-grid--reverse-#{nth(nth($silc-core--breakpoints, $i), 1)} {
             flex-direction: row-reverse;
         }
 
@@ -85,27 +85,27 @@
 /* Grid columns
    ========================================================================== */
 
-.silk-grid__col {
+.silc-grid__col {
     flex: 0 1 auto; // Ensures IE10 gets correct default
     width: 100%;
     box-sizing: border-box;
-    padding-left: $silk-grid--gutter;
-    margin-top: $silk-grid--margin-top;
-    margin-bottom: $silk-grid--margin-bottom; 
+    padding-left: $silc-grid--gutter;
+    margin-top: $silc-grid--margin-top;
+    margin-bottom: $silc-grid--margin-bottom; 
 
-    .silk-grid--no-gutters & {
+    .silc-grid--no-gutters & {
         padding-left: 0;
     }
 }
     
-@for $i from 1 to length($silk-core--breakpoints) + 1 {
+@for $i from 1 to length($silc-core--breakpoints) + 1 {
     
-    @include media(nth(nth($silk-core--breakpoints, $i), 1)) {
+    @include media(nth(nth($silc-core--breakpoints, $i), 1)) {
         
-        @for $x from 1 to $silk-grid--columns {
+        @for $x from 1 to $silc-grid--columns {
 
-            .silk-grid__col--#{nth(nth($silk-core--breakpoints, $i), 1)}-#{$x} {
-                width: 100% / $silk-grid--columns * $x;
+            .silc-grid__col--#{nth(nth($silc-core--breakpoints, $i), 1)}-#{$x} {
+                width: 100% / $silc-grid--columns * $x;
             }
 
         }
