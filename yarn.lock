@@ -6,6 +6,6 @@ sass@^0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/sass/-/sass-0.5.0.tgz#9dee1183a0f400361f2c5d3453bf2e54705e03f9"
 
-silc-core@nickrigby/silc-core:
+silc-core@^0.2.0:
   version "0.2.0"
-  resolved "https://codeload.github.com/nickrigby/silc-core/tar.gz/a66d19ba66579b4e1a0342788aebd4cc74175687"
+  resolved "https://registry.yarnpkg.com/silc-core/-/silc-core-0.2.0.tgz#741f61fdeddb265fa5abe1e3578e97dcab10820b"
