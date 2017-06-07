@@ -50,39 +50,39 @@
     flex-direction: row-reverse;
 }
 
-@for $i from 1 to length($silc-core--breakpoints) + 1 {
+@each $breakpoint-name, $breakpoint-width in $silc-core--breakpoints {
 
-    @include media(nth(nth($silc-core--breakpoints, $i), 1)) {
+    @include media(#{$breakpoint-name}) {
 
-        .silc-grid--justify-left-#{nth(nth($silc-core--breakpoints, $i), 1)} {
+        .silc-grid--justify-left-#{$breakpoint-name} {
             justify-content: flex-start;
         }
 
-        .silc-grid--justify-right-#{nth(nth($silc-core--breakpoints, $i), 1)} {
+        .silc-grid--justify-right-#{$breakpoint-name} {
             justify-content: flex-end;
         }
 
-        .silc-grid--justify-center-#{nth(nth($silc-core--breakpoints, $i), 1)} {
+        .silc-grid--justify-center-#{$breakpoint-name} {
             justify-content: center;
         }
 
-        .silc-grid--justify-between-#{nth(nth($silc-core--breakpoints, $i), 1)} {
+        .silc-grid--justify-between-#{$breakpoint-name} {
             justify-content: space-between;
         }
 
-        .silc-grid--align-top-#{nth(nth($silc-core--breakpoints, $i), 1)} {
+        .silc-grid--align-top-#{$breakpoint-name} {
             align-items: flex-start;
         }
 
-        .silc-grid--align-bottom-#{nth(nth($silc-core--breakpoints, $i), 1)} {
+        .silc-grid--align-bottom-#{$breakpoint-name} {
             align-items: flex-end;
         }
 
-        .silc-grid--align-center-#{nth(nth($silc-core--breakpoints, $i), 1)} {
+        .silc-grid--align-center-#{$breakpoint-name} {
             align-items: center;
         }
 
-        .silc-grid--reverse-#{nth(nth($silc-core--breakpoints, $i), 1)} {
+        .silc-grid--reverse-#{$breakpoint-name} {
             flex-direction: row-reverse;
         }
 
@@ -114,17 +114,17 @@
     }
 }
     
-@for $i from 1 to length($silc-core--breakpoints) + 1 {
+@each $breakpoint-name, $breakpoint-width in $silc-core--breakpoints {
     
-    @include media(nth(nth($silc-core--breakpoints, $i), 1)) {
+    @include media(#{$breakpoint-name}) {
         
         @for $x from 1 to $silc-grid--columns {
 
-            .silc-grid__col--#{nth(nth($silc-core--breakpoints, $i), 1)}-#{$x} {
+            .silc-grid__col--#{$breakpoint-name}-#{$x} {
                 width: 100% / $silc-grid--columns * $x;
             }
 
-            .silc-grid__col--#{nth(nth($silc-core--breakpoints, $i), 1)}-auto {
+            .silc-grid__col--#{$breakpoint-name}-auto {
                 width: auto;
             }
 
