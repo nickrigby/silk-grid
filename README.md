@@ -44,6 +44,9 @@ Column widths can be changed on a per-breakpoint basis using the `silc-grid__col
 </div>
 ```
 
+#### Auto column width
+A column width can also be set to "auto", where it's width is not explicitly set. Auto widths can be applied across all breakpoints using `silc-grid__col--auto` or at specific breakpoints using `silc-grid__col--{breakpoint}-auto`.
+
 ### No gutters
 By default, silc grids have gutters, which are specified using the `$silc-grid--gutter` variable. However, using the `silc-grid--no-gutters` modifier class, you can specify individual grids to have no gutters.
 
@@ -84,6 +87,17 @@ Justify the alignment of grid columns using the `silc-grid--justify-{alignment}`
 ...
 </div>
 <div class="silc-grid silc-grid--justify-center-small">
+...
+</div>
+```
+
+#### Justify between
+Uses flexbox `space-between` to justify content. Great for two column rows where one row is flush left, and the other is flush right.
+```html
+<div class="silc-grid silc-grid--justify-between">
+...
+</div>
+<div class="silc-grid silc-grid--justify-between-small">
 ...
 </div>
 ```
