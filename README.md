@@ -1,5 +1,5 @@
-# Grid component for silc framework
-The grid component is a lightweight, flexbox-based grid system for the [silc framework](https://github.com/nickrigby/silc). The grid uses responsive classes, that can be generated from any number of custom breakpoints.
+# silc grid [![npm version](https://badge.fury.io/js/silc-grid.svg)](https://badge.fury.io/js/silc-grid)
+The grid module is a lightweight, flexbox-based grid system for the [silc framework](https://github.com/nickrigby/silc). The grid uses responsive classes, that can be generated from any number of custom breakpoints.
 
 ## HTML
 ```html
