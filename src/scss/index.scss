@@ -120,11 +120,11 @@
         
         @for $x from 1 to $silc-grid--columns {
 
-            .silc-grid__col--#{$breakpoint-name}-#{$x} {
+            .silc-grid__col--#{$x}-#{$breakpoint-name} {
                 width: 100% / $silc-grid--columns * $x;
             }
 
-            .silc-grid__col--#{$breakpoint-name}-auto {
+            .silc-grid__col--auto-#{$breakpoint-name} {
                 width: auto;
             }
 
