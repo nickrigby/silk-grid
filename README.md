@@ -4,48 +4,48 @@ The grid module is a lightweight, flexbox-based grid system for the [silc framew
 ## HTML
 ```html
 <div class="silc-grid">
-    <div class="silc-grid__col silc-grid__col--large-6">6</div>
-    <div class="silc-grid__col silc-grid__col--large-6">6</div>
+    <div class="silc-grid__col silc-grid__col--6-large">6</div>
+    <div class="silc-grid__col silc-grid__col--6-large">6</div>
 </div>
 
 <div class="silc-grid">
-    <div class="silc-grid__col silc-grid__col--large-4">4</div>
-    <div class="silc-grid__col silc-grid__col--large-4">4</div>
-    <div class="silc-grid__col silc-grid__col--large-4">4</div>
+    <div class="silc-grid__col silc-grid__col--4-large">4</div>
+    <div class="silc-grid__col silc-grid__col--4-large">4</div>
+    <div class="silc-grid__col silc-grid__col--4-large">4</div>
 </div>
 
 <div class="silc-grid">
-    <div class="silc-grid__col silc-grid__col--medium-6 silc-grid__col--large-3">3</div>
-    <div class="silc-grid__col silc-grid__col--medium-6 silc-grid__col--large-3">3</div>
-    <div class="silc-grid__col silc-grid__col--medium-6 silc-grid__col--large-3">3</div>
-    <div class="silc-grid__col silc-grid__col--medium-6 silc-grid__col--large-3">3</div>
+    <div class="silc-grid__col silc-grid__col--6-medium silc-grid__col--3-large">3</div>
+    <div class="silc-grid__col silc-grid__col--6-medium silc-grid__col--3-large">3</div>
+    <div class="silc-grid__col silc-grid__col--6-medium silc-grid__col--3-large">3</div>
+    <div class="silc-grid__col silc-grid__col--6-medium silc-grid__col--3-large">3</div>
 </div>
 ```
 
 ## Class modifiers
 
 ### Column widths
-Column widths can be changed on a per-breakpoint basis using the `silc-grid__col--{breakpoint}-{columns}` modifier class.
+Column widths can be changed on a per-breakpoint basis using the `silc-grid__col--{columns}-{breakpoint}` modifier class.
 
 ```html
 <div class="silc-grid">
-    <div class="silc-grid__col silc-grid__col--small-6 silc-grid__col--medium-3">
+    <div class="silc-grid__col silc-grid__col--6-small silc-grid__col--3-medium">
     ...
     </div>
-    <div class="silc-grid__col silc-grid__col--small-6 silc-grid__col--medium-3">
+    <div class="silc-grid__col silc-grid__col--6-small silc-grid__col--3-medium">
     ...
     </div>
-    <div class="silc-grid__col silc-grid__col--small-6 silc-grid__col--medium-3">
+    <div class="silc-grid__col silc-grid__col--6-small silc-grid__col--3-medium">
     ...
     </div>
-    <div class="silc-grid__col silc-grid__col--small-6 silc-grid__col--medium-3">
+    <div class="silc-grid__col silc-grid__col--6-small silc-grid__col--3-medium">
     ...
     </div>
 </div>
 ```
 
 #### Auto column width
-A column width can also be set to "auto", where it's width is not explicitly set. Auto widths can be applied across all breakpoints using `silc-grid__col--auto` or at specific breakpoints using `silc-grid__col--{breakpoint}-auto`.
+A column width can also be set to "auto", where it's width is not explicitly set. Auto widths can be applied across all breakpoints using `silc-grid__col--auto` or at specific breakpoints using `silc-grid__col--auto-{breakpoint}`.
 
 ### No gutters
 By default, silc grids have gutters, which are specified using the `$silc-grid--gutter` variable. However, using the `silc-grid--no-gutters` modifier class, you can specify individual grids to have no gutters.
