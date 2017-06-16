@@ -5,7 +5,7 @@
   "main": "src/scss/index.scss",
   "scripts": {
     "compile-sass": "sass --update src/scss:dist",
-    "serve": "http-server"
+    "serve": "yarn compile-sass && http-server -o"
   },
   "author": {
     "name": "Nick Rigby",
