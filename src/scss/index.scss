@@ -112,6 +112,18 @@
     .silc-grid--collapse & {
         margin-bottom: 0;
     }
+
+    @for $x from 1 to $silc-grid--columns {
+        
+        &--#{$x} {
+            width: 100% / $silc-grid--columns * $x;
+        }
+
+        &--auto {
+            width: auto;
+        }
+
+    }
 }
     
 @each $breakpoint-name, $breakpoint-width in $silc-core--breakpoints {
