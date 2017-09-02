@@ -56,6 +56,15 @@ By default, silc grids have gutters, which are specified using the `$silc-grid--
 </div>
 ```
 
+#### Collapse
+It is also possible to remove the bottom margin from grid columns using the `silc-grid--collapse` modifier.
+
+```html
+<div class="silc-grid silc-grid--collapse">
+...
+</div>
+```
+
 __Note:__ To set all grids to have no gutters by default, simply set the `$silc-grid--gutter` variable to `0`.
 
 ###  Justify content
