@@ -19,7 +19,7 @@
 }
 
 .silc-grid--with-gutters {
-    margin-left: $silc-grid--gutter;
+    margin-left: -#{$silc-grid--gutter};
 }
 
 .silc-grid--justify-center {
