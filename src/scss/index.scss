@@ -18,6 +18,10 @@
     margin-left: 0;
 }
 
+.silc-grid--with-gutters {
+    margin-left: $silc-grid--gutter;
+}
+
 .silc-grid--justify-center {
     justify-content: center;
 }
@@ -107,6 +111,10 @@
 
     .silc-grid--no-gutters & {
         padding-left: 0;
+    }
+    
+    .silc-grid--with-gutters & {
+        padding-left: $silc-grid--gutter;
     }
 
     .silc-grid--collapse & {
