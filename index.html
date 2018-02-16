@@ -90,7 +90,7 @@
         </div>
 
         <h2>Grid with auto width and space between</h2>
-        <div class="silc-grid silc-grid--justify-between-medium silc-grid--no-margin">
+        <div class="silc-grid silc-grid--justify-between-medium">
             <div class="silc-grid__col silc-grid__col--6-small silc-grid__col--auto-medium">
                 <div class="panel">This is a larger column</div>
             </div>
@@ -98,6 +98,24 @@
                 <div class="panel">right</div>
             </div>
         </div>
+
+        <h2>Nested Grid</h2>
+        <div class="silc-grid silc-grid--justify-between-medium silc-grid--collapse">
+            <div class="silc-grid__col silc-grid__col--6">
+                <div class="silc-grid">
+                    <div class="silc-grid__col silc-grid__col--6">
+                        <div class="panel">Nested 6</div>
+                    </div>
+                    <div class="silc-grid__col silc-grid__col--6">
+                        <div class="panel">Nested 6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="silc-grid__col silc-grid__col--6">
+                <div class="panel">6</div>
+            </div>
+        </div>
+
 
     </body>
 </html>
