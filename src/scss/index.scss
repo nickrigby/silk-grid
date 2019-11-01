@@ -5,99 +5,95 @@
    Grid container
    ========================================================================== */
 
-.silc-grid {
+.#{$silc-grid--namespace}grid {
     display: flex;
     flex-wrap: wrap;
     margin-left: -#{$silc-grid--gutter};
-}
 
-/* Grid container modifiers
+    /* Grid container modifiers
    ========================================================================== */
 
-.silc-grid--no-gutters {
-    margin-left: 0;
-}
-
-.silc-grid--with-gutters {
-    margin-left: -#{$silc-grid--gutter};
-}
-
-.silc-grid--justify-center {
-    justify-content: center;
-}
-
-.silc-grid--justify-right {
-    justify-content: flex-end;
-}
-
-.silc-grid--justify-left {
-    justify-content: flex-start;
-}
-
-.silc-grid--justify-between {
-    justify-content: space-between;
-}
-
-.silc-grid--align-top {
-    align-items: flex-start;
-}
-
-.silc-grid--align-bottom {
-    align-items: flex-end;
-}
-
-.silc-grid--align-center {
-    align-items: center;
-}
-
-.silc-grid--reverse {
-    flex-direction: row-reverse;
-}
-
-@each $breakpoint-name, $breakpoint-width in $silc-core--breakpoints {
-
-    @include media(#{$breakpoint-name}) {
-
-        .silc-grid--justify-left-#{$breakpoint-name} {
-            justify-content: flex-start;
-        }
-
-        .silc-grid--justify-right-#{$breakpoint-name} {
-            justify-content: flex-end;
-        }
-
-        .silc-grid--justify-center-#{$breakpoint-name} {
-            justify-content: center;
-        }
-
-        .silc-grid--justify-between-#{$breakpoint-name} {
-            justify-content: space-between;
-        }
-
-        .silc-grid--align-top-#{$breakpoint-name} {
-            align-items: flex-start;
-        }
-
-        .silc-grid--align-bottom-#{$breakpoint-name} {
-            align-items: flex-end;
-        }
-
-        .silc-grid--align-center-#{$breakpoint-name} {
-            align-items: center;
-        }
-
-        .silc-grid--reverse-#{$breakpoint-name} {
-            flex-direction: row-reverse;
-        }
-
+    &--no-gutters {
+        margin-left: 0;
     }
 
+    &--justify-center {
+        justify-content: center;
+    }
+
+    &--justify-right {
+        justify-content: flex-end;
+    }
+
+    &--justify-left {
+        justify-content: flex-start;
+    }
+
+    &--justify-between {
+        justify-content: space-between;
+    }
+
+    &--align-top {
+        align-items: flex-start;
+    }
+
+    &--align-bottom {
+        align-items: flex-end;
+    }
+
+    &--align-center {
+        align-items: center;
+    }
+
+    &--reverse {
+        flex-direction: row-reverse;
+    }
+
+    @each $breakpoint-name, $breakpoint-width in $silc-core--breakpoints {
+
+        @include media(#{$breakpoint-name}) {
+    
+            &--justify-left-#{$breakpoint-name} {
+                justify-content: flex-start;
+            }
+    
+            &--justify-right-#{$breakpoint-name} {
+                justify-content: flex-end;
+            }
+    
+            &--justify-center-#{$breakpoint-name} {
+                justify-content: center;
+            }
+    
+            &--justify-between-#{$breakpoint-name} {
+                justify-content: space-between;
+            }
+    
+            &--align-top-#{$breakpoint-name} {
+                align-items: flex-start;
+            }
+    
+            &--align-bottom-#{$breakpoint-name} {
+                align-items: flex-end;
+            }
+    
+            &--align-center-#{$breakpoint-name} {
+                align-items: center;
+            }
+    
+            &--reverse-#{$breakpoint-name} {
+                flex-direction: row-reverse;
+            }
+    
+        }
+    
+    }
 }
 
 /* Grid columns
    ========================================================================== */
 
-.silc-grid__col {
+.#{$silc-grid--namespace}grid__col {
     flex: 0 1 auto; // Ensures IE10 gets correct default
     width: 100%;
     box-sizing: border-box;
@@ -109,15 +105,11 @@
         width: auto;
     }
 
-    .silc-grid--no-gutters & {
+    .#{$silc-grid--namespace}grid--no-gutters > & {
         padding-left: 0;
     }
-    
-    .silc-grid--with-gutters & {
-        padding-left: $silc-grid--gutter;
-    }
 
-    .silc-grid--collapse & {
+    .#{$silc-grid--namespace}grid--collapse > & {
         margin-bottom: 0;
     }
 
@@ -132,22 +124,22 @@
         }
 
     }
-}
+
+    @each $breakpoint-name, $breakpoint-width in $silc-core--breakpoints {
     
-@each $breakpoint-name, $breakpoint-width in $silc-core--breakpoints {
+        @include media(#{$breakpoint-name}) {
+            
+            @for $x from 1 to $silc-grid--columns + 1 {
     
-    @include media(#{$breakpoint-name}) {
-        
-        @for $x from 1 to $silc-grid--columns + 1 {
-
-            .silc-grid__col--#{$x}-#{$breakpoint-name} {
-                width: 100% / $silc-grid--columns * $x;
+                &--#{$x}-#{$breakpoint-name} {
+                    width: 100% / $silc-grid--columns * $x;
+                }
+    
+                &--auto-#{$breakpoint-name} {
+                    width: auto;
+                }
+    
             }
-
-            .silc-grid__col--auto-#{$breakpoint-name} {
-                width: auto;
-            }
-
         }
     }
 }
