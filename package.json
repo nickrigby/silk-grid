@@ -1,11 +1,11 @@
 {
   "name": "silc-grid",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Grid system for the silc framework",
   "main": "src/scss/index.scss",
   "scripts": {
     "compile-sass": "sass --update src/scss:dist",
-    "serve": "yarn compile-sass && http-server -o"
+    "serve": "npm run compile-sass && http-server -o"
   },
   "author": {
     "name": "Nick Rigby",
@@ -16,6 +16,6 @@
   "devDependencies": {
     "http-server": "^0.10.0",
     "sass": "^0.5.0",
-    "silc-core": "^0.3.1"
+    "silc-core": "^0.6.0"
   }
 }
